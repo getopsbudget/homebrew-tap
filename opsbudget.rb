@@ -5,21 +5,21 @@
 class Opsbudget < Formula
   desc "CLI for Ping by OpsBudget — uptime monitoring"
   homepage "https://opsbudget.com"
-  version "0.1.2"
+  version "0.1.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/getopsbudget/opsbudget-cli/releases/download/v0.1.2/opsbudget_darwin_amd64.tar.gz"
-      sha256 "2f061d5cd2abd0efd6597c10aefad8e79830d893d7b30f7c21c7bcd293151336"
+      url "https://github.com/getopsbudget/opsbudget-cli/releases/download/v0.1.3/opsbudget_darwin_amd64.tar.gz"
+      sha256 "4077d9954d39583eca47f9f12a9cfc834ad3bd678856e27cfc38856da907b43c"
 
       define_method(:install) do
         bin.install "opsbudget"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/getopsbudget/opsbudget-cli/releases/download/v0.1.2/opsbudget_darwin_arm64.tar.gz"
-      sha256 "e3511d76ebf4e75ffe43323f7b92b92fd6d3cb8741fcfb386908be8d13e22cbf"
+      url "https://github.com/getopsbudget/opsbudget-cli/releases/download/v0.1.3/opsbudget_darwin_arm64.tar.gz"
+      sha256 "b57861e84be81bd86601e5894f9ac8a75aa169b51d3195e46f78130e4cda524c"
 
       define_method(:install) do
         bin.install "opsbudget"
@@ -29,15 +29,15 @@ class Opsbudget < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/getopsbudget/opsbudget-cli/releases/download/v0.1.2/opsbudget_linux_amd64.tar.gz"
-      sha256 "405a3d96201cfc63a0da70cabd2877aed40bab3f9358bc6b388c854c5cfd1d64"
+      url "https://github.com/getopsbudget/opsbudget-cli/releases/download/v0.1.3/opsbudget_linux_amd64.tar.gz"
+      sha256 "25cad0e3a7ce1f6c039f1d5f6ba6a3f0730828b436132dd1a600834a6225bff5"
       define_method(:install) do
         bin.install "opsbudget"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/getopsbudget/opsbudget-cli/releases/download/v0.1.2/opsbudget_linux_arm64.tar.gz"
-      sha256 "2390db705cb7599bee89bfd2e26b1466d4580762816b9aa39f03374d2c12efa8"
+      url "https://github.com/getopsbudget/opsbudget-cli/releases/download/v0.1.3/opsbudget_linux_arm64.tar.gz"
+      sha256 "27366fccd3caf1113163f172680dac8fade08f453c8141b1954d0f6b916db6a0"
       define_method(:install) do
         bin.install "opsbudget"
       end
