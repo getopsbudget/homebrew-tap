@@ -1,34 +1,33 @@
 # typed: false
 # frozen_string_literal: true
 
-# This formula is auto-updated by GoReleaser on each CLI release.
-# Manual edits will be overwritten.
 class Opsbudget < Formula
-  desc "CLI for Ping by OpsBudget — uptime monitoring"
+  desc "CLI for OpsBudget uptime monitoring"
   homepage "https://opsbudget.com"
+  version "0.1.0" # TODO: Update this to match the latest release tag
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/getopsbudget/opsbudget-cli/releases/download/v#{version}/opsbudget_#{version}_darwin_arm64.tar.gz"
-      sha256 "PLACEHOLDER"
+      url "https://github.com/getopsbudget/opsbudget-cli/releases/latest/download/opsbudget_darwin_arm64.tar.gz"
+      sha256 "0000000000000000000000000000000000000000000000000000000000000000" # TODO: Update sha256 after release artifacts are published
     end
 
     on_intel do
-      url "https://github.com/getopsbudget/opsbudget-cli/releases/download/v#{version}/opsbudget_#{version}_darwin_amd64.tar.gz"
-      sha256 "PLACEHOLDER"
+      url "https://github.com/getopsbudget/opsbudget-cli/releases/latest/download/opsbudget_darwin_amd64.tar.gz"
+      sha256 "0000000000000000000000000000000000000000000000000000000000000000" # TODO: Update sha256 after release artifacts are published
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/getopsbudget/opsbudget-cli/releases/download/v#{version}/opsbudget_#{version}_linux_arm64.tar.gz"
-      sha256 "PLACEHOLDER"
+      url "https://github.com/getopsbudget/opsbudget-cli/releases/latest/download/opsbudget_linux_arm64.tar.gz"
+      sha256 "0000000000000000000000000000000000000000000000000000000000000000" # TODO: Update sha256 after release artifacts are published
     end
 
     on_intel do
-      url "https://github.com/getopsbudget/opsbudget-cli/releases/download/v#{version}/opsbudget_#{version}_linux_amd64.tar.gz"
-      sha256 "PLACEHOLDER"
+      url "https://github.com/getopsbudget/opsbudget-cli/releases/latest/download/opsbudget_linux_amd64.tar.gz"
+      sha256 "0000000000000000000000000000000000000000000000000000000000000000" # TODO: Update sha256 after release artifacts are published
     end
   end
 
@@ -37,6 +36,6 @@ class Opsbudget < Formula
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/opsbudget --version")
+    assert_match "opsbudget", shell_output("#{bin}/opsbudget --version")
   end
 end
